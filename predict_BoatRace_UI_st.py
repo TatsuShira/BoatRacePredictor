@@ -12,16 +12,19 @@ st.set_page_config(layout='wide')
 # 会場名の辞書を作成
 CircuitCode0 = {"桐生" : "01", "戸田" : "02", "江戸川" : "03", "平和島" : "04", "多摩川" : "05", "浜名湖" : "06", "蒲郡" : "07", "常滑" :  "08", "津" : "09", "三国" : "10", "びわこ" : "11", "住之江" : "12", "尼崎" : "13", "鳴門" : "14", "丸亀" : "15", "児島" : "16", "宮島" : "17", "徳山" : "18", "下関" : "19", "若松" : "20", "芦屋" : "21", "福岡" : "22", "唐津" : "23", "大村" : "24"}
 
-Base_dir = r'C:\Users\1te11\Dropbox\Obsidian4Cloud\004_Python\004_BoatRace'
 
+# リポジトリのルートディレクトリを取得
+Base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# モジュールを検索するパスに新たなパスを追加
+sys.path.append(Base_dir + "/mylib")
 # モデルのロード
 br = br()
 model = br.load_model(Base_dir, "model3")
 
-sys.path.append(r"C:\Users\1te11\Dropbox\Obsidian4Cloud\004_Python\004_BoatRace\mylib")
 
 df_RaceList_for_pred = pd.DataFrame()
-Base_dir = r'C:\Users\1te11\Dropbox\Obsidian4Cloud\004_Python\004_BoatRace\009_DataSets'
+
 os.chdir(Base_dir)
 
 df_RaceList_for_pred_dir = Base_dir + r'\df_RaceList_for_pred.pkl'
