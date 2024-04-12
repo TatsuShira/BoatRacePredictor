@@ -74,7 +74,7 @@ kiwisolver==1.4.4
 kmodes==0.12.2
 lhafile==0.3.0
 lightgbm==3.3.3
-llvmlite==0.39.1
+
 Mako==1.2.4
 Markdown==3.4.1
 markdown-it-py==3.0.0
